@@ -41,22 +41,20 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.9);
+      background: rgba(0, 0, 0, 0.9);
       justify-content: center;
       align-items: center;
-      color: #fff;
     }
     .modal-content {
-      position: relative;
-      width: 90%;
-      max-width: 600px;
       text-align: center;
     }
+    /* Close button positioned relative to the modal container */
     .close {
       position: absolute;
       top: 1rem;
       right: 1rem;
       font-size: 2rem;
+      color: #fff;
       cursor: pointer;
     }
     .menu-items {
@@ -96,8 +94,8 @@
 
   <!-- Modal -->
   <div class="modal" id="modal">
+    <span class="close" id="close">&times;</span>
     <div class="modal-content">
-      <span class="close" id="close">&times;</span>
       <ul class="menu-items">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
@@ -124,7 +122,7 @@
 
     // Also close modal if user clicks outside the modal content
     modal.addEventListener('click', (e) => {
-      if(e.target === modal) {
+      if (e.target === modal) {
         modal.style.display = 'none';
       }
     });
